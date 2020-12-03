@@ -10,7 +10,7 @@ const container = document.createElement("div");
 container.classList.add("mamaDiv");
 hotBody.appendChild(container);
 
-gridSize = 256
+const button = document.querySelector("#dasButton")
 
 const gridGenerator = function(gridSize) { 
     console.log("executing gridGenerator()")
@@ -18,16 +18,25 @@ const gridGenerator = function(gridSize) {
     for (let i = 1; i <= gridSize; i++){
         let testing = document.createElement("div");
         testing.classList.add("lilDiv")
-        testing.textContent = `Div ${i}`;
+        container.style.backgroundColor = "red";
+        container.style.gridTemplateColumns = `repeat(${Math.sqrt(gridSize)}, ${100/Math.sqrt(gridSize)}%)`
+        container.style.gridTemplateRows = `repeat(${Math.sqrt(gridSize)}, ${100/Math.sqrt(gridSize)}%)`
         container.appendChild(testing);
     }
 }
 
+// gridSize = []
+
 const chooseGridSize = function(a) {
     console.log("executing chooseGridSize()")
     a = prompt("how many rows and columns?");
-    let gridSize = (a * a);
+    gridSize = (a * a);
+    if (gridSize > 10000) {
+        alert("too large buh")
+        chooseGridSize()
+    }
     console.log(gridSize);
+    dasButton.textContent = `Current size is ${a} x ${a}. Click to resize.`
     return gridGenerator(gridSize);
 }
 
@@ -37,4 +46,4 @@ click.addEventListener("click", () => {
     chooseGridSize();
 });
 
-gridGenerator(gridSize)
+gridGenerator(256)
