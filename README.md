@@ -5,7 +5,8 @@ Odin requirements:
 https://www.theodinproject.com/lessons/etch-a-sketch-project
 
 CURRENT:
-Fixed grid where user can select different grid sizes with button.
+Fixed grid where user can select different grid sizes with button. Deleted alot of unnecessary css.
+
 1) on hover over change to a random color
 2) on every pass over + 10% black so that at 10 pass overs its completely (100%) black
 
