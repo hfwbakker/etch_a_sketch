@@ -1,18 +1,23 @@
 # etch_a_sketch
 etch a sketch project for odin
 
-Odin requirements:
+Assignment (Odin):
 https://www.theodinproject.com/lessons/etch-a-sketch-project
 
-CURRENT:
-Fixed grid where user can select different grid sizes with button. Deleted alot of unnecessary css.
-
+------------------------------------------------------------------
+TODO:
 1) on hover over change to a random color
 2) on every pass over + 10% black so that at 10 pass overs its completely (100%) black
+3) fix bugs
+------------------------------------------------------------------
 
+BUGS:
+- When changing size to + 100 alert will pop up to say it should be lower (than 100) BUT button still shows wrong size
+------------------------------------------------------------------
 
-OLD:
-1) make sure that if someone selects amount of rows and amount of columns it actually creates the right amount of rows and columns rather than just the right amount of divs
-2) somehow make sure that however many rows and columns are chosen they take up 100% of the width and height
+LOG:
+(6 December 2020) added logic for making all the squares (lilDiv's) pink. Same logic (should be) usable for adding css values?
 
-made it to point 3: add a hover effect. did it succesfully in CSS but maybe goot to try and do it with JS as well. you know, for science.
+(Before) Fixed grid where user can select different grid sizes with button. Deleted alot of unnecessary css.
+
+(Before) Created main logic.
